@@ -5,25 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <style>
+        body::-webkit-scrollbar {
+            background-color: rgb(35, 34, 34);
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(60, 59, 59);
+        }
+    </style>
 </head>
 <body>
-    <div id="header" class="flex flex-col h-[100vh] bg-slate-900">
-        <nav class="flex justify-between items-center pt-[20px] pr-[50px] pl-[40px]">
+    <div id="header" class="flex flex-col bg-slate-900 pb-[20px]">
+        <nav class="flex justify-between items-center pt-[20px] pr-[30px] pl-[80px] flex-wrap">
             <div id="logo">
-                <a href="home.html" class="font-bold text-neutral-50 text-[20px]">MiftakhFaizin</a>
+                <a href="home.html" class="font-bold text-neutral-50 text-[25px]">MiftakhFaizin</a>
             </div>
-            <ul class="flex text-neutral-50 font-bold gap-[25px]">
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">Home</a></li>
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">Portofolio</a></li>
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">Blog</a></li>
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">About Us</a></li>
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">Contact</a></li>
-                <li><a href="#" class="border border-slate-900 hover:border-slate-700 hover:bg-slate-700 rounded-[4px] px-[8px] py-[4px] transiton-colors duration-300 ease-in-out">Todos</a></li>
+            <ul class="flex text-neutral-50 font-bold gap-[18px]">
+                <li><a href="#" class="border-2 border-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Home</a></li>
+                <li><a href="portofolio.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Portofolio</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">Blog</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">About Us</a></li>
+                <li><a href="contact.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">Contact</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">Todos</a></li>
             </ul>
         </nav>
-        <div id="banner" class="flex h-full">
+    </div>
 
+   <div id="banner" class="flex justify-between h-[550px] bg-slate-900 pl-[80px] pt-[80px] gap-[50px]">
+        <div class="flex flex-col w-[800px] pt-[40px] gap-[20px]">
+            <p class="font-bold text-neutral-50 text-[35px]">We Are <span class="text-red-600">Creative</span> Designers</p>
+            <p class="text-neutral-50 text-justify pr-[70px]">Our design and development team brings innovative ideas to life. Whether you're looking to refresh your brand or build something entirely new, we create designs that inspire and captivate your audience.</p>
+            <a id="order-btn" href="#" class="w-[90px] mt-[10px] text-neutral-50 text-center font-bold border-2 border-slate-800 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transition-colors duration-300 ease-in-out">Order</a>
+        </div>
+        <div id="slider-banner" class="relative flex border border-slate-800 rounded-md w-[800px] h-[300px] mr-[50px]">
+            <a id="btn-slider-previous" href="#" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-neutral-50 text-[80px] z-10">&#8249;</a>
+            <img id="banner-image" class="h-full w-full object-cover" src="assets/—Pngtree—web development concept flat design_5363510.png" alt="">
+            <a id="btn-slider-next" href="#" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-neutral-50 text-[80px] z-10">&#8250;</a>
         </div>
     </div>
+
+    
+    <div id="order" class="fixed hidden top-0 left-0 bottom-0 right-0 flex justify-center items-center overflow-x-auto z-40 backdrop-brightness-50">
+        <div class="flex gap-[6px]">
+            <table class="h-[500px] text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 shadow-md shadow-slate-800 sm:rounded-lg">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">Service</th>
+                        <th scope="col" class="px-6 py-3">Category</th>
+                        <th scope="col" class="px-6 py-3">Price</th>
+                        <th scope="col" class="px-6 py-3"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Full Website Development
+                        </th>
+                        <td class="px-6 py-4">
+                            Web Development
+                        </td>
+                        <td class="px-6 py-4">
+                            $1500
+                        </td>
+                        <td class="px-6 py-4">
+                            <a id="order-btn" href="#" class="w-[60px] text-neutral-50 text-center font-bold bg-red-600 hover:bg-red-700 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Order Now</a>
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            UI/UX Design
+                        </th>
+                        <td class="px-6 py-4">
+                            Design Services
+                        </td>
+                        <td class="px-6 py-4">
+                            $800
+                        </td>
+                        <td class="px-6 py-4">
+                            <a id="order-btn" href="#" class="w-[60px] text-neutral-50 text-center font-bold bg-red-600 hover:bg-red-700 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Order Now</a>
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Website Security Optimization
+                        </th>
+                        <td class="px-6 py-4">
+                            Security
+                        </td>
+                        <td class="px-6 py-4">
+                            $500
+                        </td>
+                        <td class="px-6 py-4">
+                            <a id="order-btn" href="#" class="w-[60px] text-neutral-50 text-center font-bold bg-red-600 hover:bg-red-700 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Order Now</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="btn-close-order" href="#" class="text-red-500 font-bold">&#10060;</a>
+        </div>
+    </div>
+
+    <div id="service" class="flex flex-col h-[550px] bg-slate-900 pt-[30px]">
+        <p class="text-neutral-50 font-bold text-[25px] text-center">Our Service</p>
+        <p class="self-center text-slate-500 text-center text-[16px] leading-[30px] max-w-[700px] pt-[30px]">We specialize in providing top-notch web development, creative UI/UX design, and advanced security services to help you succeed in the digital world. Each service is designed to enhance your online presence and keep your brand secure.</p>
+        <div id="container-service" class="flex justify-around gap-[30px] px-[80px] pt-[80px]">
+            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+                <img src="" alt="">
+                <p class="text-neutral-50 font-bold text-[24px]">Website Development</p>
+                <p class="text-slate-500 text-[14px]">Building high-performance websites tailored to your business needs.</p>
+            </label>
+            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+                <img src="" alt="">
+                <p class="text-neutral-50 font-bold text-[24px]">UI/UX Design</p>
+                <p class="text-slate-500 text-[14px]">Crafting intuitive and visually stunning interfaces for a seamless user experience.</p>
+            </label>
+            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+                <img src="" alt="">
+                <p class="text-neutral-50 font-bold text-[24px]">Advanced Security</p>
+                <p class="text-slate-500 text-[14px]">Implementing cutting-edge security measures to protect your digital assets.</p>
+            </label>
+        </div>
+    </div>
+
+    <div id="client" class="flex flex-col min-h-[550px] pb-[50px] bg-slate-900 pt-[30px]">
+        <p class="text-neutral-50 font-bold text-[25px] text-center">Our Clients</p>
+        <div id="container-review" class="flex justify-around px-[80px] gap-[30px] flex-wrap">
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Darwin Nunez</p>
+                        <p class="text-slate-500 text-sm">Uruguay</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">MiftakhFaizin's services are exceptional. Their creativity and attention to detail helped elevate our brand to new heights.</p>
+            </div>
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Lionel Messi</p>
+                        <p class="text-slate-500 text-sm">Argentina</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">Their team completely transformed our user interface, making it not only more beautiful but also highly functional.</p>
+            </div>
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Antony</p>
+                        <p class="text-slate-500 text-sm">Brazil</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">Thanks to MiftakhFaizin, our website is secure, fast, and delivers a great user experience. We highly recommend their services!</p>
+            </div>
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Mykhailo Mudryk</p>
+                        <p class="text-slate-500 text-sm">Ukraine</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">The level of professionalism and skill displayed was nothing short of impressive.</p>
+            </div>
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Jay Idzes</p>
+                        <p class="text-slate-500 text-sm">Indonesia</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">Working with MiftakhFaizin was a fantastic experience. Their commitment to quality is unmatched.</p>
+            </div>
+            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                <div class="flex justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-neutral-50 font-bold text-md">Rizki Ridho</p>
+                        <p class="text-slate-500 text-sm">Indonesia</p>
+                    </div>
+                    <p class="text-yellow-600">★★★★★</p>
+                </div>
+                <p class="text-neutral-200 text-sm">Their design approach was innovative and really resonated with our target audience.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white dark:bg-slate-800 pt-[30px]">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-center">
+              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          </li>
+                          <li>
+                              <a href="https://tailwindcss.com/" class="hover:underline">Flowbite</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                          </li>
+                          <li>
+                              <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Instagram</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="#" class="hover:underline">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 HACKTIV8 WORKSHOP PROGRAM MIFTAKH DAMAR FAIZIN
+              </span>
+          </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="home.js"></script>    
 </body>
 </html>
