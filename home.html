@@ -17,11 +17,11 @@
 </head>
 <body>
     <div id="header" class="flex flex-col bg-slate-900 pb-[20px]">
-        <nav class="flex justify-between items-center pt-[20px] pr-[30px] pl-[80px] flex-wrap">
+        <nav class="flex flex-col gap-[30px] items-stretch md:flex-row justify-between items-center pt-[20px] pr-[30px] pl-[80px] flex-wrap">
             <div id="logo">
                 <a href="home.html" class="font-bold text-neutral-50 text-[25px]">MiftakhFaizin</a>
             </div>
-            <ul class="flex text-neutral-50 font-bold gap-[18px]">
+            <ul class="flex flex-col md:flex-row text-neutral-50 font-bold gap-[18px]">
                 <li><a href="#" class="border-2 border-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Home</a></li>
                 <li><a href="portofolio.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Portofolio</a></li>
                 <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">Blog</a></li>
@@ -32,13 +32,13 @@
         </nav>
     </div>
 
-   <div id="banner" class="flex justify-between h-[550px] bg-slate-900 pl-[80px] pt-[80px] gap-[50px]">
-        <div class="flex flex-col w-[800px] pt-[40px] gap-[20px]">
+   <div id="banner" class="flex flex-col md:flex-row justify-between min-h-[500px] bg-slate-900 pl-[80px] pt-[80px] gap-[50px]">
+        <div class="flex flex-col w-full md:w-[800px] pt-[40px] gap-[20px]">
             <p class="font-bold text-neutral-50 text-[35px]">We Are <span class="text-red-600">Creative</span> Designers</p>
-            <p class="text-neutral-50 text-justify pr-[70px]">Our design and development team brings innovative ideas to life. Whether you're looking to refresh your brand or build something entirely new, we create designs that inspire and captivate your audience.</p>
+            <p class="hidden md:inline text-neutral-50 text-justify pr-[70px]">Our design and development team brings innovative ideas to life. Whether you're looking to refresh your brand or build something entirely new, we create designs that inspire and captivate your audience.</p>
             <a id="order-btn" href="#" class="w-[90px] mt-[10px] text-neutral-50 text-center font-bold border-2 border-slate-800 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transition-colors duration-300 ease-in-out">Order</a>
         </div>
-        <div id="slider-banner" class="relative flex border border-slate-800 rounded-md w-[800px] h-[300px] mr-[50px]">
+        <div id="slider-banner" class="relative flex border border-slate-800 rounded-md w-full md:w-[800px] h-[300px] mr-[50px]">
             <a id="btn-slider-previous" href="#" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-neutral-50 text-[80px] z-10">&#8249;</a>
             <img id="banner-image" class="h-full w-full object-cover" src="assets/—Pngtree—web development concept flat design_5363510.png" alt="">
             <a id="btn-slider-next" href="#" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-neutral-50 text-[80px] z-10">&#8250;</a>
@@ -106,10 +106,10 @@
         </div>
     </div>
 
-    <div id="service" class="flex flex-col h-[550px] bg-slate-900 pt-[30px]">
+    <div id="service" class="flex flex-col min-h-[550px] bg-slate-900 pt-[30px] pb-[50px]">
         <p class="text-neutral-50 font-bold text-[25px] text-center">Our Service</p>
         <p class="self-center text-slate-500 text-center text-[16px] leading-[30px] max-w-[700px] pt-[30px]">We specialize in providing top-notch web development, creative UI/UX design, and advanced security services to help you succeed in the digital world. Each service is designed to enhance your online presence and keep your brand secure.</p>
-        <div id="container-service" class="flex justify-around gap-[30px] px-[80px] pt-[80px]">
+        <div id="container-service" class="flex justify-center flex-wrap gap-[30px] px-[80px] pt-[80px]">
             <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
                 <img src="" alt="">
                 <p class="text-neutral-50 font-bold text-[24px]">Website Development</p>
@@ -128,68 +128,70 @@
         </div>
     </div>
 
-    <div id="client" class="flex flex-col min-h-[550px] pb-[50px] bg-slate-900 pt-[30px]">
+    <div id="client" class="flex flex-col min-h-[550px] pb-[50px] bg-slate-900 pt-[50px]">
         <p class="text-neutral-50 font-bold text-[25px] text-center">Our Clients</p>
-        <div id="container-review" class="flex justify-around px-[80px] gap-[30px] flex-wrap">
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Darwin Nunez</p>
-                        <p class="text-slate-500 text-sm">Uruguay</p>
+        <div class="flex justify-center items-center">
+            <div id="container-review" class="flex justify-center w-full px-[80px] gap-[30px] flex-wrap">
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Darwin Nunez</p>
+                            <p class="text-slate-500 text-sm">Uruguay</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">MiftakhFaizin's services are exceptional. Their creativity and attention to detail helped elevate our brand to new heights.</p>
                 </div>
-                <p class="text-neutral-200 text-sm">MiftakhFaizin's services are exceptional. Their creativity and attention to detail helped elevate our brand to new heights.</p>
-            </div>
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Lionel Messi</p>
-                        <p class="text-slate-500 text-sm">Argentina</p>
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Lionel Messi</p>
+                            <p class="text-slate-500 text-sm">Argentina</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">Their team completely transformed our user interface, making it not only more beautiful but also highly functional.</p>
                 </div>
-                <p class="text-neutral-200 text-sm">Their team completely transformed our user interface, making it not only more beautiful but also highly functional.</p>
-            </div>
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Antony</p>
-                        <p class="text-slate-500 text-sm">Brazil</p>
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Antony</p>
+                            <p class="text-slate-500 text-sm">Brazil</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">Thanks to MiftakhFaizin, our website is secure, fast, and delivers a great user experience. We highly recommend their services!</p>
                 </div>
-                <p class="text-neutral-200 text-sm">Thanks to MiftakhFaizin, our website is secure, fast, and delivers a great user experience. We highly recommend their services!</p>
-            </div>
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Mykhailo Mudryk</p>
-                        <p class="text-slate-500 text-sm">Ukraine</p>
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Mykhailo Mudryk</p>
+                            <p class="text-slate-500 text-sm">Ukraine</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">The level of professionalism and skill displayed was nothing short of impressive.</p>
                 </div>
-                <p class="text-neutral-200 text-sm">The level of professionalism and skill displayed was nothing short of impressive.</p>
-            </div>
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Jay Idzes</p>
-                        <p class="text-slate-500 text-sm">Indonesia</p>
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Jay Idzes</p>
+                            <p class="text-slate-500 text-sm">Indonesia</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">Working with MiftakhFaizin was a fantastic experience. Their commitment to quality is unmatched.</p>
                 </div>
-                <p class="text-neutral-200 text-sm">Working with MiftakhFaizin was a fantastic experience. Their commitment to quality is unmatched.</p>
-            </div>
-            <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-neutral-50 font-bold text-md">Rizki Ridho</p>
-                        <p class="text-slate-500 text-sm">Indonesia</p>
+                <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-neutral-50 font-bold text-md">Rizki Ridho</p>
+                            <p class="text-slate-500 text-sm">Indonesia</p>
+                        </div>
+                        <p class="text-yellow-600">★★★★★</p>
                     </div>
-                    <p class="text-yellow-600">★★★★★</p>
+                    <p class="text-neutral-200 text-sm">Their design approach was innovative and really resonated with our target audience.</p>
                 </div>
-                <p class="text-neutral-200 text-sm">Their design approach was innovative and really resonated with our target audience.</p>
             </div>
         </div>
     </div>
