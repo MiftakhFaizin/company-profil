@@ -9,8 +9,6 @@ btnNavigasi.addEventListener("click", () => {
 })
 
 
-
-
 let orderBtn = document.getElementById("order-btn")
 let orderDisplay = document.getElementById("order")
 let closeOrderBtn = document.getElementById("btn-close-order")
@@ -34,15 +32,21 @@ const bannerImages = [
 ]
 let currentImage = 0
 
+window.addEventListener("load", () => {
+    bannerImage.setAttribute("src", bannerImages[currentImage])
+})
+
 btnSliderNext.addEventListener("click", () => {
     if(currentImage == bannerImages.length -1) currentImage = 0
     else currentImage++
     bannerImage.setAttribute("src", bannerImages[currentImage])
+    console.log(currentImage)
 })
 
 btnSliderPrevious.addEventListener("click", () => {
-    if(currentImage == 0) currentImage = bannerImages.length - 1
+    if(currentImage == 0) currentImage = bannerImages.length-1
     else currentImage--
     bannerImage.setAttribute("src", bannerImages[currentImage])
+    console.log(currentImage)
 })
 
