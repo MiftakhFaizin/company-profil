@@ -17,11 +17,12 @@
 </head>
 <body>
     <div id="header" class="flex flex-col bg-slate-900 pb-[20px]">
-        <nav class="flex flex-col gap-[30px] items-stretch md:flex-row justify-between items-center pt-[20px] pr-[30px] pl-[80px] flex-wrap">
-            <div id="logo">
+        <nav class="flex flex-col gap-[30px] items-stretch lg:flex-row justify-between items-center pt-[20px] pr-[30px] pl-[40px] md:pl-[80px] flex-wrap">
+            <div id="logo" class="flex justify-between max-lg:w-full">
                 <a href="home.html" class="font-bold text-neutral-50 text-[25px]">MiftakhFaizin</a>
+                <img src="assets/icons8-hamburger-menu-50.png" alt="" id="btn-navigasi" class="lg:hidden w-[30px] h-[30px]">
             </div>
-            <ul class="flex flex-col md:flex-row text-neutral-50 font-bold gap-[18px]">
+            <ul id="navigasi" class="hidden lg:flex flex-col lg:flex-row text-neutral-50 font-bold gap-[18px]">
                 <li><a href="#" class="border-2 border-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Home</a></li>
                 <li><a href="portofolio.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Portofolio</a></li>
                 <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transiton-colors duration-300 ease-in-out">Blog</a></li>
@@ -33,7 +34,7 @@
     </div>
 
    <div id="banner" class="flex flex-col md:flex-row items-stretch justify-between min-h-[500px] bg-slate-900 md:pl-[80px] pt-[80px] gap-[50px]">
-        <div class="flex flex-col w-full md:w-[800px] pl-[40px] pt-[40px] gap-[20px]">
+        <div class="flex flex-col w-full md:w-[800px] pl-[40px] md:pl-[0px] pt-[40px] gap-[20px]">
             <div class="flex flex-col">
                 <p class="font-bold text-neutral-50 text-[35px]">We Are <span class="text-red-600">Creative</span> Designers</p>
                 <p class="hidden md:inline text-neutral-50 text-justify pr-[70px]">Our design and development team brings innovative ideas to life. Whether you're looking to refresh your brand or build something entirely new, we create designs that inspire and captivate your audience.</p>
@@ -108,21 +109,21 @@
         </div>
     </div>
 
-    <div id="service" class="flex flex-col min-h-[550px] bg-slate-900 pt-[30px] pb-[50px]">
+    <div id="service" class="flex flex-col min-h-[550px] bg-slate-900 px-[20px] pt-[30px] pb-[50px]">
         <p class="text-neutral-50 font-bold text-[25px] text-center">Our Service</p>
         <p class="self-center text-slate-500 text-center text-[16px] leading-[30px] max-w-[700px] pt-[30px]">We specialize in providing top-notch web development, creative UI/UX design, and advanced security services to help you succeed in the digital world. Each service is designed to enhance your online presence and keep your brand secure.</p>
         <div id="container-service" class="flex justify-center flex-wrap gap-[30px] px-[80px] pt-[80px]">
-            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+            <label class="flex flex-col justify-center min-w-[300px] w-full md:w-[400px] md:max-w-[600px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
                 <img src="" alt="">
                 <p class="text-neutral-50 font-bold text-[24px]">Website Development</p>
                 <p class="text-slate-500 text-[14px]">Building high-performance websites tailored to your business needs.</p>
             </label>
-            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+            <label class="flex flex-col justify-center min-w-[300px] md:w-[400px] md:max-w-[600px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
                 <img src="" alt="">
                 <p class="text-neutral-50 font-bold text-[24px]">UI/UX Design</p>
                 <p class="text-slate-500 text-[14px]">Crafting intuitive and visually stunning interfaces for a seamless user experience.</p>
             </label>
-            <label class="flex flex-col justify-center w[10px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
+            <label class="flex flex-col justify-center min-w-[300px] w-full md:w-[400px] md:max-w-[600px] h-[190px] border-2 shadow-md shadow-slate-800 border-slate-800 bg-gray-900 hover:bg-[#000721] rounded-md px-[15px] text-center transiton-colors duration-300 ease-in-out">
                 <img src="" alt="">
                 <p class="text-neutral-50 font-bold text-[24px]">Advanced Security</p>
                 <p class="text-slate-500 text-[14px]">Implementing cutting-edge security measures to protect your digital assets.</p>
@@ -133,7 +134,7 @@
     <div id="client" class="flex flex-col min-h-[550px] pb-[50px] bg-slate-900 pt-[50px]">
         <p class="text-neutral-50 font-bold text-[25px] text-center">Our Clients</p>
         <div class="flex justify-center items-center">
-            <div id="container-review" class="flex md:justify-center w-full px-[80px] md:gap-[30px] flex-wrap">
+            <div id="container-review" class="flex justify-center w-full px-[80px] md:gap-[30px] flex-wrap">
                 <div class="flex flex-col gap-[20px] justify-center rounded-md mt-[100px] py-[20px] px-[20px] border-2 border-slate-800 shadow-md shadow-slate-800 bg-gray-900 max-w-[300px] max-h-[300px]">
                     <div class="flex justify-between">
                         <div class="flex flex-col">

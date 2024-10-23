@@ -1,3 +1,16 @@
+let btnNavigasi = document.getElementById("btn-navigasi")
+let navigasi = document.getElementById("navigasi")
+
+let statusBtnNavigasi = false
+btnNavigasi.addEventListener("click", () => {
+    statusBtnNavigasi = !statusBtnNavigasi
+    if(statusBtnNavigasi) navigasi.style.display = "flex"
+    else navigasi.style.display = "none"
+})
+
+
+
+
 let orderBtn = document.getElementById("order-btn")
 let orderDisplay = document.getElementById("order")
 let closeOrderBtn = document.getElementById("btn-close-order")
