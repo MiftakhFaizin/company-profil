@@ -8,7 +8,6 @@ btnNavigasi.addEventListener("click", () => {
     else navigasi.style.display = "none"
 })
 
-
 let orderBtn = document.getElementById("order-btn")
 let orderDisplay = document.getElementById("order")
 let closeOrderBtn = document.getElementById("btn-close-order")

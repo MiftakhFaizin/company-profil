@@ -5,25 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body::-webkit-scrollbar {
+            background-color: rgb(35, 34, 34);
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(60, 59, 59);
+        }
+    </style>
 </head>
 <body>
-    <div id="header" class="flex flex-col h-[100vh] bg-slate-900">
-        <nav class="flex justify-between items-center pt-[20px] pr-[50px] pl-[40px]">
-            <div id="logo">
-                <a href="home.html" class="font-bold text-neutral-50 text-[20px]">MiftakhFaizin</a>
+    <div id="header" class="flex flex-col bg-slate-900 pb-[20px]">
+        <nav class="flex flex-col gap-[30px] items-stretch lg:flex-row justify-between items-center pt-[20px] pr-[30px] pl-[40px] md:pl-[80px] flex-wrap">
+            <div class="flex justify-between max-lg:w-full">
+                <a id="logo" href="home.html" class="font-bold text-neutral-50 text-[25px]">MiftakhFaizin</a>
+                <img src="assets/icons8-hamburger-menu-50.png" alt="" id="btn-navigasi" class="lg:hidden w-[30px] h-[30px]">
             </div>
-            <ul class="flex text-neutral-50 font-bold gap-[18px]">
-                <li><a href="home.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Home</a></li>
-                <li><a href="#" class="border-2 border-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Portofolio</a></li>
-                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Blog</a></li>
-                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">About Us</a></li>
-                <li><a href="contact.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Contact</a></li>
-                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transiton-colors duration-300 ease-in-out">Todos</a></li>
+            <ul id="navigasi" class="hidden lg:flex flex-col lg:flex-row text-neutral-50 font-bold gap-[18px]">
+                <li><a href="home.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[8px] transition-colors duration-300 ease-in-out">Home</a></li>
+                <li><a href="portofolio.html" class="border-2 border-slate-800 rounded-[7px] px-[14px] py-[8px] transition-colors duration-300 ease-in-out">Portofolio</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transition-colors duration-300 ease-in-out">Blog</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transition-colors duration-300 ease-in-out">About Us</a></li>
+                <li><a href="contact.html" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transition-colors duration-300 ease-in-out">Contact</a></li>
+                <li><a href="#" class="border-2 border-slate-900 hover:bg-slate-800 rounded-[7px] px-[14px] py-[6px] transition-colors duration-300 ease-in-out">Todos</a></li>
             </ul>
         </nav>
-        <div id="banner" class="flex h-full">
+    </div>
 
+    <div class="flex flex-col items-center min-h-[550px] bg-slate-900 pt-[100px] pb-[180px]">
+        <div class="flex flex-wrap flex-col w-full items-center max-md:px-[40px] max-md:gap-[20px]">
+            <p class="text-neutral-50 font-bold text-[50px] max-md:leading-[60px]">We Creative <span class="text-red-600">Quality</span> Designs</p>
+            <p class="text-neutral-50 text-[20px]">We Specialize in Web Design / Development and Graphic Design</p>
+        </div>
+        <div id="filter-portofolio" class="flex justify-center max-sm:flex-wrap max-sm:gap-[2px] gap-[30px] border-2 border-slate-800 rounded-lg max-sm:rounded-[0px] mt-[80px] py-[20px] px-[20px]">
+            <button class="focus:bg-slate-800 text-neutral-50 font-bold text-[18px] rounded-md px-[15px] py-[8px] hover:text-neutral-300 focus:hover:text-neutral-50 transition-colors duration-300 ease-in-out">All</button>
+            <button class="focus:bg-slate-800 text-neutral-50 font-bold text-[18px] rounded-md px-[15px] py-[8px] hover:text-neutral-300 focus:hover:text-neutral-50 transition-colors duration-300 ease-in-out">Website Design</button>
+            <button class="focus:bg-slate-800 text-neutral-50 font-bold text-[18px] rounded-md px-[15px] py-[8px] hover:text-neutral-300 focus:hover:text-neutral-50 transition-colors duration-300 ease-in-out">UI/UX</button>
+            <button class="focus:bg-slate-800 text-neutral-50 font-bold text-[18px] rounded-md px-[15px] py-[8px] hover:text-neutral-300 focus:hover:text-neutral-50 transition-colors duration-300 ease-in-out">Website security</button>
+        </div>
+        <div id="portofolio-container" class="flex flex-wrap w-full justify-center gap-[30px] px-[80px]">
         </div>
     </div>
+
+    <footer class="bg-white dark:bg-slate-800 pt-[30px]">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-center">
+              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          </li>
+                          <li>
+                              <a href="https://tailwindcss.com/" class="hover:underline">Flowbite</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                          </li>
+                          <li>
+                              <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Instagram</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                          <li class="mb-4">
+                              <a href="#" class="hover:underline">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 HACKTIV8 WORKSHOP PROGRAM MIFTAKH DAMAR FAIZIN
+              </span>
+          </div>
+        </div>
+    </footer>
+
+<script src="script/portofolio.js"></script>
 </body>
 </html>
